@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Query Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .panel h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .question-selector {
+            margin-bottom: 20px;
+        }
+        
+        .question-selector select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+        }
+        
+        .question-display {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .hint {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .query-input {
+            margin-bottom: 20px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            resize: vertical;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-run {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .btn-run:hover {
+            background: #219a52;
+        }
+        
+        .btn-clear {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .btn-clear:hover {
+            background: #c0392b;
+        }
+        
+        .results {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 400px;
+            overflow: auto;
+        }
+        
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .result-table th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            position: sticky;
+            top: 0;
+        }
+        
+        .result-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .result-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .success {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #bee5eb;
+        }
+        
+        .comparison {
+            margin-top: 20px;
+        }
+        
+        .comparison h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SQL Query Practice</h1>
+            <p>Test your SQL skills against a real database</p>
+        </div>
+        
+        <div class="content">
+            <div class="panel">
+                <h2>Practice Questions</h2>
+                
+                <div class="question-selector">
+                    <select id="questionSelect" onchange="loadQuestion()">
+                        <option value="">Select a question...</option>
+                        <option value="1">Question 1: Third Transaction by Product</option>
+                        <option value="2">Question 2: Regional Spending > 300</option>
+                        <option value="3">Question 3: Products with Zero Transactions</option>
+                        <option value="4">Question 4: Products Above Average Price</option>
+                    </select>
+                </div>
+                
+                <div id="questionDisplay" class="question-display" style="display: none;">
+                    <h3 id="questionText"></h3>
+                    <div id="hint" class="hint" style="display: none;"></div>
+                </div>
+                
+                <div class="query-input">
+                    <textarea id="queryInput" placeholder="Write your SQL query here..."></textarea>
+                </div>
+                
+                <div class="buttons">
+                    <button class="btn-run" onclick="executeQuery()">Run Query</button>
+                    <button class="btn-clear" onclick="clearQuery()">Clear</button>
+                </div>
+                
+                <div id="userResults" class="results">
+                    <p>Your results will appear here...</p>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <h2>Expected Results</h2>
+                <div id="expectedResults" class="results">
+                    <p>Select a question to see expected results...</p>
+                </div>
+                
+                <div class="comparison">
+                    <h3>Comparison</h3>
+                    <div id="comparisonResult">
+                        <p>Run your query to see comparison results...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestionId = null;
+        
+        async function loadQuestion() {
+            const select = document.getElementById('questionSelect');
+            const questionId = select.value;
+            currentQuestionId = questionId;
+            
+            if (!questionId) {
+                document.getElementById('questionDisplay').style.display = 'none';
+                document.getElementById('expectedResults').innerHTML = '<p>Select a question to see expected results...</p>';
+                return;
+            }
+            
+            document.getElementById('questionDisplay').style.display = 'block';
+            document.getElementById('userResults').innerHTML = '<p>Your results will appear here...</p>';
+            document.getElementById('comparisonResult').innerHTML = '<p>Run your query to see comparison results...</p>';
+            
+            // Show loading
+            document.getElementById('expectedResults').innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading expected results...</p>
+                </div>
+            `;
+            
+            try {
+                const response = await fetch(`/get_question/${questionId}`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('expectedResults').innerHTML = `
+                        <div class="error">Error: ${data.error}</div>
+                    `;
+                    return;
+                }
+                
+                document.getElementById('questionText').textContent = data.question;
+                
+                const hintElement = document.getElementById('hint');
+                if (data.hint) {
+                    hintElement.textContent = `Hint: ${data.hint}`;
+                    hintElement.style.display = 'block';
+                } else {
+                    hintElement.style.display = 'none';
+                }
+                
+                // Display expected results
+                displayResults(data.expected_result, 'expectedResults');
+                
+            } catch (error) {
+                document.getElementById('expectedResults').innerHTML = `
+                    <div class="error">Error loading question: ${error.message}</div>
+                `;
+            }
+        }
+        
+        async function executeQuery() {
+            const query = document.getElementById('queryInput').value.trim();
+            
+            if (!query) {
+                alert('Please enter a SQL query');
+                return;
+            }
+            
+            if (!currentQuestionId) {
+                alert('Please select a question first');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('userResults').innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Executing query...</p>
+                </div>
+            `;
+            
+            try {
+                const response = await fetch('/execute_query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayResults(result, 'userResults');
+                    compareResults(result);
+                } else {
+                    document.getElementById('userResults').innerHTML = `
+                        <div class="error">Error: ${result.error}</div>
+                    `;
+                }
+                
+            } catch (error) {
+                document.getElementById('userResults').innerHTML = `
+                    <div class="error">Network error: ${error.message}</div>
+                `;
+            }
+        }
+        
+        function displayResults(result, elementId) {
+            const element = document.getElementById(elementId);
+            
+            if (result.data && result.data.length > 0) {
+                const columns = result.columns;
+                let html = `<div class="success">Query returned ${result.row_count} row(s)</div>`;
+                html += '<table class="result-table">';
+                
+                // Header
+                html += '<tr>';
+                columns.forEach(col => {
+                    html += `<th>${col}</th>`;
+                });
+                html += '</tr>';
+                
+                // Data rows
+                result.data.forEach(row => {
+                    html += '<tr>';
+                    columns.forEach(col => {
+                        html += `<td>${row[col]}</td>`;
+                    });
+                    html += '</tr>';
+                });
+                
+                html += '</table>';
+                element.innerHTML = html;
+            } else if (result.message) {
+                element.innerHTML = `<div class="success">${result.message}</div>`;
+            } else {
+                element.innerHTML = '<p>No results returned</p>';
+            }
+        }
+        
+        function compareResults(userResult) {
+            const comparisonElement = document.getElementById('comparisonResult');
+            
+            if (!userResult.data) {
+                comparisonElement.innerHTML = '<p>Cannot compare - no data returned from your query</p>';
+                return;
+            }
+            
+            // For a real implementation, you would compare the user's results
+            // with the expected results more thoroughly
+            comparisonElement.innerHTML = `
+                <div class="success">
+                    <p>Your query returned ${userResult.row_count} row(s)</p>
+                    <p>Compare your results with the expected results on the right.</p>
+                    <p><strong>Check if:</strong></p>
+                    <ul>
+                        <li>Column names match</li>
+                        <li>Number of rows matches</li>
+                        <li>Data values are correct</li>
+                        <li>Sorting order is correct (if specified)</li>
+                    </ul>
+                </div>
+            `;
+        }
+        
+        function clearQuery() {
+            document.getElementById('queryInput').value = '';
+            document.getElementById('userResults').innerHTML = '<p>Your results will appear here...</p>';
+            document.getElementById('comparisonResult').innerHTML = '<p>Run your query to see comparison results...</p>';
+        }
+    </script>
+</body>
+</html>
