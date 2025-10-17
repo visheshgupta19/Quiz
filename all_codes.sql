@@ -1,19 +1,19 @@
 
-CREATE TABLE IF NOT EXISTS public.customers (
+CREATE TABLE IF NOT EXISTS customers (
   "CustomerID"   VARCHAR(100) PRIMARY KEY,
   "CustomerName" VARCHAR(100),
   "Region"       VARCHAR(100),
   "SignupDate"   TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS public.products (
+CREATE TABLE IF NOT EXISTS  products (
   "ProductID"   VARCHAR(100) PRIMARY KEY,
   "ProductName" VARCHAR(100),
   "Category"    VARCHAR(100),
   "Price"       NUMERIC(18,6)
 );
 
-CREATE TABLE IF NOT EXISTS public.transactions (
+CREATE TABLE IF NOT EXISTS  transactions (
   "TransactionID"   VARCHAR(100) PRIMARY KEY,
   "CustomerID"      VARCHAR(100) NOT NULL,
   "ProductID"       VARCHAR(100) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS public.transactions (
 
 
 
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0001','Lawrence Carroll','South America','2022-07-10 00:00:00'),
 	 ('C0002','Elizabeth Lutz','Asia','2022-02-13 00:00:00'),
 	 ('C0003','Michael Rivera','South America','2024-03-07 00:00:00'),
@@ -39,7 +39,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0008','David Li','North America','2024-01-13 00:00:00'),
 	 ('C0009','Joy Clark','Europe','2023-08-14 00:00:00'),
 	 ('C0010','Aaron Cox','Europe','2022-12-15 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0011','Bryan Mathews','South America','2022-12-12 00:00:00'),
 	 ('C0012','Kevin May','South America','2024-08-07 00:00:00'),
 	 ('C0013','Lauren Buchanan','South America','2024-05-19 00:00:00'),
@@ -50,7 +50,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0018','Tyler Haynes','North America','2024-09-21 00:00:00'),
 	 ('C0019','Brandon Rodriguez','Europe','2023-01-12 00:00:00'),
 	 ('C0020','Mr. Manuel Conway','North America','2024-06-11 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0021','Robert Blanchard','Asia','2023-04-17 00:00:00'),
 	 ('C0022','Teresa Esparza','Asia','2023-10-27 00:00:00'),
 	 ('C0023','Nicholas Cain','Europe','2022-03-04 00:00:00'),
@@ -61,7 +61,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0028','Jennifer Pena','Asia','2024-06-29 00:00:00'),
 	 ('C0029','Erin Manning','North America','2022-04-16 00:00:00'),
 	 ('C0030','Mark Brock','North America','2024-01-30 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0031','Tina Miller','South America','2024-04-11 00:00:00'),
 	 ('C0032','Dustin Campbell','South America','2024-04-17 00:00:00'),
 	 ('C0033','Tyler Holt','North America','2024-08-04 00:00:00'),
@@ -72,7 +72,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0038','Jeffrey Perkins','North America','2022-04-16 00:00:00'),
 	 ('C0039','Angela Harris','South America','2024-10-13 00:00:00'),
 	 ('C0040','Michael Harrell','Asia','2022-03-07 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0041','Lindsey Deleon','Europe','2023-12-27 00:00:00'),
 	 ('C0042','Heather Riley','North America','2023-03-15 00:00:00'),
 	 ('C0043','Sandy Short MD','Asia','2023-02-05 00:00:00'),
@@ -83,7 +83,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0048','Matthew Park','South America','2024-11-07 00:00:00'),
 	 ('C0049','Jason Yates','North America','2024-09-18 00:00:00'),
 	 ('C0050','Ryan Davis','North America','2024-03-02 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0051','Nicholas Ellis','Europe','2023-12-21 00:00:00'),
 	 ('C0052','Stanley Aguirre','South America','2024-02-20 00:00:00'),
 	 ('C0053','Albert Burke','Europe','2022-06-18 00:00:00'),
@@ -94,7 +94,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0058','Zachary Turner','North America','2024-01-28 00:00:00'),
 	 ('C0059','Mrs. Kimberly Wright','North America','2024-04-07 00:00:00'),
 	 ('C0060','James Murphy','Europe','2022-04-22 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0061','Brandon Escobar','Europe','2023-03-06 00:00:00'),
 	 ('C0062','Jeffery Hartman','Europe','2022-12-14 00:00:00'),
 	 ('C0063','Wayne Ferguson','Europe','2024-02-05 00:00:00'),
@@ -105,7 +105,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0068','Mark Cox','North America','2023-04-04 00:00:00'),
 	 ('C0069','Stacy Foster','Europe','2023-12-03 00:00:00'),
 	 ('C0070','Timothy Perez','Europe','2022-03-15 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0071','Taylor Murphy','South America','2022-07-01 00:00:00'),
 	 ('C0072','Sarah Scott','North America','2024-07-24 00:00:00'),
 	 ('C0073','Heidi Johnson','Europe','2022-08-20 00:00:00'),
@@ -116,7 +116,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0078','Julia Palmer','Asia','2024-11-13 00:00:00'),
 	 ('C0079','Brian Murillo','North America','2022-02-02 00:00:00'),
 	 ('C0080','David Gonzalez','Asia','2024-02-07 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0081','Kimberly Turner','Europe','2024-02-24 00:00:00'),
 	 ('C0082','Aimee Taylor','South America','2022-05-13 00:00:00'),
 	 ('C0083','Christina Stark','South America','2022-04-07 00:00:00'),
@@ -127,7 +127,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0088','Carlos Murray','Asia','2023-05-14 00:00:00'),
 	 ('C0089','Paul Carter','Europe','2024-04-02 00:00:00'),
 	 ('C0090','Charles Hamilton','Asia','2023-10-17 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0091','Lisa Kirk','South America','2023-03-16 00:00:00'),
 	 ('C0092','Jacqueline Zamora','Asia','2024-05-29 00:00:00'),
 	 ('C0093','Nancy Walker','Asia','2024-07-13 00:00:00'),
@@ -138,7 +138,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0098','Laura Gilbert','North America','2024-10-21 00:00:00'),
 	 ('C0099','Rodney Eaton','South America','2023-01-29 00:00:00'),
 	 ('C0100','Clinton Gomez','Europe','2023-03-16 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0101','Kelsey Roberts','Asia','2023-09-30 00:00:00'),
 	 ('C0102','Michael Atkinson','South America','2022-09-16 00:00:00'),
 	 ('C0103','Jennifer Munoz','Europe','2022-05-15 00:00:00'),
@@ -149,7 +149,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0108','David Davis','South America','2022-09-28 00:00:00'),
 	 ('C0109','Abigail Jones','North America','2022-05-09 00:00:00'),
 	 ('C0110','Elizabeth Wells','Asia','2024-09-21 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0111','Roger David','Europe','2024-11-13 00:00:00'),
 	 ('C0112','Brian Adkins','South America','2022-07-07 00:00:00'),
 	 ('C0113','Joseph Ortiz Jr.','South America','2022-06-17 00:00:00'),
@@ -160,7 +160,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0118','Jacob Holt','South America','2022-01-22 00:00:00'),
 	 ('C0119','David Armstrong','Europe','2023-11-13 00:00:00'),
 	 ('C0120','Francisco Diaz','South America','2023-01-13 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0121','Mark Atkinson','Europe','2023-07-23 00:00:00'),
 	 ('C0122','Corey Ruiz','North America','2022-05-06 00:00:00'),
 	 ('C0123','Jason Johnston','Asia','2023-11-05 00:00:00'),
@@ -171,7 +171,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0128','Henry Leach','Asia','2023-05-29 00:00:00'),
 	 ('C0129','Marcus Livingston','South America','2024-04-14 00:00:00'),
 	 ('C0130','Robert Jones','South America','2023-04-19 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0131','Scott Wilson','North America','2022-06-05 00:00:00'),
 	 ('C0132','Lisa Jackson','Europe','2023-02-01 00:00:00'),
 	 ('C0133','Gwendolyn Carter','South America','2023-03-11 00:00:00'),
@@ -182,7 +182,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0138','Cynthia Clayton','Asia','2024-11-01 00:00:00'),
 	 ('C0139','Ricky Gutierrez','North America','2022-03-14 00:00:00'),
 	 ('C0140','Gregory Estrada','Asia','2023-07-01 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0141','Paul Parsons','Europe','2023-02-23 00:00:00'),
 	 ('C0142','Nicole Long DVM','Asia','2024-02-08 00:00:00'),
 	 ('C0143','Brian Parker','Asia','2024-05-27 00:00:00'),
@@ -193,7 +193,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0148','Matthew Rogers','South America','2023-04-16 00:00:00'),
 	 ('C0149','Tina Wilson','Europe','2023-01-21 00:00:00'),
 	 ('C0150','Angela Williams','South America','2022-09-13 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0151','Amber Gonzalez','South America','2024-11-22 00:00:00'),
 	 ('C0152','Justin Evans','South America','2022-04-19 00:00:00'),
 	 ('C0153','Justin Smith','South America','2022-03-20 00:00:00'),
@@ -204,7 +204,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0158','Wendy Browning','South America','2023-04-12 00:00:00'),
 	 ('C0159','Austin Miller','Asia','2022-08-06 00:00:00'),
 	 ('C0160','Jodi Cook','North America','2022-04-05 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0161','Jessica Warren','Asia','2022-03-14 00:00:00'),
 	 ('C0162','Edwin Watson','Asia','2022-03-29 00:00:00'),
 	 ('C0163','Tiffany Cain','South America','2023-06-08 00:00:00'),
@@ -215,7 +215,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0168','Karen Clements MD','South America','2022-12-13 00:00:00'),
 	 ('C0169','Jennifer Shaw','South America','2023-04-13 00:00:00'),
 	 ('C0170','Logan Harris','Europe','2023-09-13 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0171','Michael Cowan','South America','2022-12-16 00:00:00'),
 	 ('C0172','Jamie Webb','Europe','2024-09-09 00:00:00'),
 	 ('C0173','Francisco Young','Asia','2022-10-06 00:00:00'),
@@ -226,7 +226,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0178','Carol Williams','Asia','2023-11-19 00:00:00'),
 	 ('C0179','Donald Miller','Europe','2022-10-16 00:00:00'),
 	 ('C0180','Amy Carpenter','Asia','2023-10-25 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0181','Alexander Barker','South America','2023-11-16 00:00:00'),
 	 ('C0182','Joshua Preston','Europe','2024-12-28 00:00:00'),
 	 ('C0183','Kimberly Johnson','North America','2024-01-23 00:00:00'),
@@ -237,7 +237,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 	 ('C0188','Anna Ball','South America','2022-05-17 00:00:00'),
 	 ('C0189','Sherri Dixon','North America','2024-01-22 00:00:00'),
 	 ('C0190','Alexander Lowe','South America','2024-05-31 00:00:00');
-INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
+INSERT INTO customers ("CustomerID","CustomerName","Region","SignupDate") VALUES
 	 ('C0191','Samantha Gibson DVM','South America','2024-04-07 00:00:00'),
 	 ('C0192','Sarah Arias','South America','2022-09-15 00:00:00'),
 	 ('C0193','Douglas Torres','Asia','2023-02-03 00:00:00'),
@@ -252,7 +252,7 @@ INSERT INTO public.customers ("CustomerID","CustomerName","Region","SignupDate")
 
 
 
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P001','ActiveWear Biography','Books',169.300000),
 	 ('P002','ActiveWear Smartwatch','Electronics',346.300000),
 	 ('P003','ComfortLiving Biography','Books',44.120000),
@@ -263,7 +263,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P008','BookWorld Bluetooth Speaker','Electronics',146.850000),
 	 ('P009','BookWorld Wall Art','Home Decor',325.010000),
 	 ('P010','ComfortLiving Smartwatch','Electronics',350.130000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P011','SoundWave Desk Lamp','Home Decor',261.200000),
 	 ('P012','ComfortLiving Headphones','Electronics',159.600000),
 	 ('P013','BookWorld Smartwatch','Electronics',114.200000),
@@ -274,7 +274,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P018','ComfortLiving Mystery Book','Books',436.890000),
 	 ('P019','ComfortLiving Sweater','Clothing',385.370000),
 	 ('P020','ActiveWear Jacket','Clothing',396.340000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P021','SoundWave Rug','Home Decor',335.840000),
 	 ('P022','HomeSense Wall Art','Home Decor',137.540000),
 	 ('P023','ActiveWear Cookware Set','Home Decor',454.530000),
@@ -285,7 +285,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P028','HomeSense Desk Lamp','Home Decor',235.580000),
 	 ('P029','TechPro Headphones','Electronics',433.640000),
 	 ('P030','ActiveWear Cookbook','Books',277.860000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P031','SoundWave Headphones','Electronics',196.400000),
 	 ('P032','BookWorld Cookbook','Books',488.630000),
 	 ('P033','TechPro T-Shirt','Clothing',64.250000),
@@ -296,7 +296,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P038','TechPro Vase','Home Decor',147.220000),
 	 ('P039','TechPro Smartwatch','Electronics',430.590000),
 	 ('P040','SoundWave Mystery Book','Books',153.190000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P041','ComfortLiving Smartphone','Electronics',456.280000),
 	 ('P042','ActiveWear Headphones','Electronics',379.440000),
 	 ('P043','SoundWave Novel','Books',404.400000),
@@ -307,7 +307,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P048','TechPro Cookbook','Books',416.400000),
 	 ('P049','TechPro Textbook','Books',147.950000),
 	 ('P050','ActiveWear Smartwatch','Electronics',437.650000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P051','ComfortLiving Desk Lamp','Home Decor',65.160000),
 	 ('P052','SoundWave Jacket','Clothing',354.810000),
 	 ('P053','TechPro Rug','Home Decor',274.940000),
@@ -318,7 +318,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P058','ActiveWear Textbook','Books',157.620000),
 	 ('P059','SoundWave Jeans','Clothing',303.200000),
 	 ('P060','HomeSense T-Shirt','Clothing',155.650000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P061','HomeSense Desk Lamp','Home Decor',156.960000),
 	 ('P062','HomeSense Novel','Books',374.160000),
 	 ('P063','TechPro Novel','Books',33.590000),
@@ -329,7 +329,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P068','TechPro Novel','Books',447.230000),
 	 ('P069','BookWorld Biography','Books',100.810000),
 	 ('P070','HomeSense T-Shirt','Clothing',48.690000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P071','TechPro T-Shirt','Clothing',127.360000),
 	 ('P072','ActiveWear Headphones','Electronics',399.340000),
 	 ('P073','ComfortLiving Laptop','Electronics',26.990000),
@@ -340,7 +340,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P078','HomeSense Rug','Home Decor',41.180000),
 	 ('P079','ActiveWear Rug','Home Decor',417.370000),
 	 ('P080','ActiveWear Jacket','Clothing',303.500000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P081','HomeSense Sweater','Clothing',66.320000),
 	 ('P082','ComfortLiving Rug','Home Decor',55.990000),
 	 ('P083','ActiveWear Smartwatch','Electronics',455.720000),
@@ -351,7 +351,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P088','SoundWave Headphones','Electronics',263.550000),
 	 ('P089','HomeSense Bluetooth Speaker','Electronics',220.910000),
 	 ('P090','ComfortLiving Biography','Books',165.300000);
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
 	 ('P091','HomeSense Rug','Home Decor',222.950000),
 	 ('P092','BookWorld Running Shoes','Clothing',389.200000),
 	 ('P093','TechPro Vase','Home Decor',304.940000),
@@ -363,7 +363,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
 	 ('P099','SoundWave Mystery Book','Books',354.290000),
 	 ('P100','HomeSense Sweater','Clothing',126.340000);
 
-INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUES
+INSERT INTO  products ("ProductID","ProductName","Category","Price") VALUES
     ('P101','TechPro Smartwatch','Electronics',425.75),
     ('P102','HomeSense Table Lamp','Home Decor',189.60),
     ('P103','BookWorld Travel Guide','Books',142.30),
@@ -371,7 +371,7 @@ INSERT INTO public.products ("ProductID","ProductName","Category","Price") VALUE
     ('P105','HomeSense Coffee Maker','Home Appliances',276.45);
 
 
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00001','C0199','P067','2024-08-25 12:38:23',1,300.680000,300.680000),
 	 ('T00112','C0146','P067','2024-05-27 22:23:54',1,300.680000,300.680000),
 	 ('T00166','C0127','P067','2024-04-25 07:38:55',1,300.680000,300.680000),
@@ -382,7 +382,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00536','C0008','P067','2024-09-22 06:13:59',1,300.680000,300.680000),
 	 ('T00564','C0157','P067','2024-12-07 17:57:40',3,902.040000,300.680000),
 	 ('T00631','C0130','P067','2024-05-14 23:14:59',2,601.360000,300.680000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00727','C0051','P067','2024-01-20 04:52:14',3,902.040000,300.680000),
 	 ('T00729','C0075','P067','2024-10-07 06:38:36',2,601.360000,300.680000),
 	 ('T00797','C0155','P067','2024-10-04 20:42:53',2,601.360000,300.680000),
@@ -393,7 +393,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00270','C0101','P034','2024-11-07 02:48:08',3,651.150000,217.050000),
 	 ('T00358','C0154','P034','2024-04-08 20:47:01',1,217.050000,217.050000),
 	 ('T00518','C0200','P034','2024-12-11 03:05:50',4,868.200000,217.050000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00546','C0049','P034','2024-08-30 06:42:27',1,217.050000,217.050000),
 	 ('T00982','C0103','P034','2024-07-17 03:25:18',1,217.050000,217.050000),
 	 ('T00003','C0028','P057','2024-01-25 14:28:34',4,958.800000,239.700000),
@@ -404,7 +404,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00161','C0055','P057','2024-07-15 07:02:39',2,479.400000,239.700000),
 	 ('T00184','C0188','P057','2024-05-13 07:24:49',2,479.400000,239.700000),
 	 ('T00218','C0148','P057','2024-01-17 19:40:55',3,719.100000,239.700000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00417','C0035','P057','2024-04-20 22:54:54',3,719.100000,239.700000),
 	 ('T00492','C0120','P057','2024-08-08 05:40:02',3,719.100000,239.700000),
 	 ('T00605','C0017','P057','2023-12-31 03:27:43',4,958.800000,239.700000),
@@ -415,7 +415,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00004','C0004','P049','2024-07-19 10:56:13',4,591.800000,147.950000),
 	 ('T00105','C0087','P049','2024-02-12 08:14:34',3,443.850000,147.950000),
 	 ('T00136','C0010','P049','2024-02-22 18:44:05',2,295.900000,147.950000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00237','C0065','P049','2024-02-27 22:16:22',2,295.900000,147.950000),
 	 ('T00239','C0132','P049','2024-12-06 19:03:54',2,295.900000,147.950000),
 	 ('T00310','C0068','P049','2024-05-18 05:03:08',2,295.900000,147.950000),
@@ -426,7 +426,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00620','C0041','P049','2024-01-05 18:43:06',4,591.800000,147.950000),
 	 ('T00650','C0070','P049','2024-10-07 14:56:13',4,591.800000,147.950000),
 	 ('T00818','C0161','P049','2024-01-01 03:54:19',1,147.950000,147.950000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00923','C0173','P049','2024-07-19 10:31:02',1,147.950000,147.950000),
 	 ('T00970','C0132','P049','2024-11-17 06:14:00',4,591.800000,147.950000),
 	 ('T00005','C0150','P087','2024-05-25 17:44:48',2,580.340000,290.170000),
@@ -437,7 +437,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00488','C0034','P087','2024-10-21 12:47:53',2,580.340000,290.170000),
 	 ('T00497','C0053','P087','2024-06-21 02:02:45',4,1160.680000,290.170000),
 	 ('T00684','C0102','P087','2024-07-17 07:26:30',1,290.170000,290.170000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00846','C0134','P087','2024-11-10 10:56:19',4,1160.680000,290.170000),
 	 ('T00875','C0086','P087','2024-09-26 23:20:59',2,580.340000,290.170000),
 	 ('T00880','C0036','P087','2024-11-02 12:20:39',3,870.510000,290.170000),
@@ -448,7 +448,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00269','C0124','P053','2024-02-06 16:22:41',4,1099.760000,274.940000),
 	 ('T00293','C0053','P053','2024-07-11 15:32:56',3,824.820000,274.940000),
 	 ('T00568','C0065','P053','2024-09-18 05:00:38',1,274.940000,274.940000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00602','C0024','P053','2024-04-26 11:26:53',1,274.940000,274.940000),
 	 ('T00744','C0004','P053','2024-03-11 09:25:22',4,1099.760000,274.940000),
 	 ('T00952','C0139','P053','2024-10-06 06:02:45',1,274.940000,274.940000),
@@ -459,7 +459,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00349','C0184','P023','2024-04-18 14:56:50',1,454.530000,454.530000),
 	 ('T00455','C0128','P023','2024-01-08 16:14:35',1,454.530000,454.530000),
 	 ('T00501','C0158','P023','2024-09-04 16:19:42',3,1363.590000,454.530000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00721','C0012','P023','2024-12-08 09:46:41',3,1363.590000,454.530000),
 	 ('T00749','C0133','P023','2024-06-20 19:04:58',2,909.060000,454.530000),
 	 ('T00997','C0164','P023','2024-11-01 23:04:56',4,1818.120000,454.530000),
@@ -470,7 +470,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00194','C0063','P069','2024-09-28 06:07:52',1,100.810000,100.810000),
 	 ('T00228','C0113','P069','2024-04-21 19:52:01',2,201.620000,100.810000),
 	 ('T00232','C0136','P069','2024-11-10 22:04:36',3,302.430000,100.810000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00355','C0017','P069','2024-01-12 20:20:37',2,201.620000,100.810000),
 	 ('T00448','C0194','P069','2024-10-22 08:13:50',2,201.620000,100.810000),
 	 ('T00561','C0172','P069','2024-05-14 14:21:56',1,100.810000,100.810000),
@@ -481,7 +481,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00644','C0008','P095','2024-06-13 09:13:19',1,227.260000,227.260000),
 	 ('T00685','C0017','P095','2024-05-11 17:59:31',2,454.520000,227.260000),
 	 ('T00800','C0122','P095','2024-08-25 16:04:54',3,681.780000,227.260000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00961','C0109','P095','2024-11-02 01:55:05',3,681.780000,227.260000),
 	 ('T00965','C0071','P095','2024-08-23 15:53:27',4,909.040000,227.260000),
 	 ('T00011','C0162','P062','2024-04-03 03:46:50',1,374.160000,374.160000),
@@ -492,7 +492,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00230','C0064','P062','2024-12-06 16:22:54',1,374.160000,374.160000),
 	 ('T00364','C0183','P062','2024-06-16 08:22:06',2,748.320000,374.160000),
 	 ('T00533','C0191','P062','2024-07-12 10:33:55',4,1496.640000,374.160000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00570','C0147','P062','2024-12-25 00:52:54',1,374.160000,374.160000),
 	 ('T00640','C0087','P062','2024-09-13 23:20:18',3,1122.480000,374.160000),
 	 ('T00649','C0028','P062','2024-01-23 07:39:44',3,1122.480000,374.160000),
@@ -503,7 +503,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00944','C0122','P062','2024-10-08 19:57:08',2,748.320000,374.160000),
 	 ('T00012','C0091','P041','2024-03-29 01:28:17',4,1825.120000,456.280000),
 	 ('T00034','C0168','P041','2024-01-09 11:00:50',4,1825.120000,456.280000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00094','C0012','P041','2024-07-14 19:37:54',4,1825.120000,456.280000),
 	 ('T00231','C0069','P041','2024-08-27 19:54:49',2,912.560000,456.280000),
 	 ('T00236','C0184','P041','2024-02-25 14:08:11',1,456.280000,456.280000),
@@ -514,7 +514,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00597','C0023','P041','2024-07-01 04:53:47',3,1368.840000,456.280000),
 	 ('T00881','C0101','P041','2024-08-19 04:22:17',3,1368.840000,456.280000),
 	 ('T00014','C0105','P060','2024-08-05 07:35:43',1,155.650000,155.650000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00392','C0072','P060','2024-11-02 20:33:22',4,622.600000,155.650000),
 	 ('T00405','C0093','P060','2024-08-02 21:41:32',2,311.300000,155.650000),
 	 ('T00452','C0009','P060','2024-03-16 17:26:03',1,155.650000,155.650000),
@@ -525,7 +525,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00203','C0124','P054','2024-03-31 16:50:02',4,229.200000,57.300000),
 	 ('T00210','C0165','P054','2024-08-15 15:59:47',2,114.600000,57.300000),
 	 ('T00262','C0143','P054','2024-01-30 22:40:57',1,57.300000,57.300000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00327','C0165','P054','2024-11-27 10:42:19',2,114.600000,57.300000),
 	 ('T00395','C0038','P054','2024-03-14 08:10:08',3,171.900000,57.300000),
 	 ('T00423','C0019','P054','2024-11-08 10:22:51',3,171.900000,57.300000),
@@ -536,7 +536,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00808','C0190','P054','2024-07-06 00:13:42',4,229.200000,57.300000),
 	 ('T00873','C0086','P054','2024-08-02 11:13:00',4,229.200000,57.300000),
 	 ('T00884','C0171','P054','2024-01-28 18:40:51',3,171.900000,57.300000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00926','C0181','P054','2024-08-16 02:29:10',3,171.900000,57.300000),
 	 ('T00016','C0072','P070','2024-07-05 23:04:17',2,97.380000,48.690000),
 	 ('T00087','C0108','P070','2024-02-16 19:58:26',1,48.690000,48.690000),
@@ -547,7 +547,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00018','C0166','P010','2024-09-21 22:21:26',3,1050.390000,350.130000),
 	 ('T00068','C0088','P010','2024-09-22 23:11:50',3,1050.390000,350.130000),
 	 ('T00243','C0069','P010','2024-08-31 00:38:43',2,700.260000,350.130000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00276','C0113','P010','2024-11-27 17:12:27',3,1050.390000,350.130000),
 	 ('T00292','C0086','P010','2024-12-26 02:30:22',2,700.260000,350.130000),
 	 ('T00315','C0125','P010','2024-04-03 21:46:38',3,1050.390000,350.130000),
@@ -558,7 +558,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00986','C0122','P010','2024-05-20 10:52:21',2,700.260000,350.130000),
 	 ('T00019','C0006','P040','2024-06-05 01:19:28',2,306.380000,153.190000),
 	 ('T00137','C0142','P040','2024-04-03 12:44:52',4,612.760000,153.190000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00347','C0139','P040','2024-01-24 21:50:37',2,306.380000,153.190000),
 	 ('T00359','C0048','P040','2024-12-04 20:50:51',4,612.760000,153.190000),
 	 ('T00406','C0171','P040','2024-02-18 00:12:39',2,306.380000,153.190000),
@@ -569,7 +569,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00930','C0193','P040','2024-05-27 09:32:58',2,306.380000,153.190000),
 	 ('T00936','C0148','P040','2024-06-11 20:36:32',4,612.760000,153.190000),
 	 ('T00993','C0027','P040','2024-03-08 09:48:14',2,306.380000,153.190000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00995','C0191','P040','2024-06-04 06:32:15',4,612.760000,153.190000),
 	 ('T00020','C0153','P007','2024-07-16 22:33:47',4,1680.600000,420.150000),
 	 ('T00163','C0101','P007','2024-03-13 22:33:34',4,1680.600000,420.150000),
@@ -580,7 +580,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00741','C0079','P007','2024-02-22 15:13:43',2,840.300000,420.150000),
 	 ('T00945','C0193','P007','2024-05-22 21:58:39',3,1260.450000,420.150000),
 	 ('T00021','C0145','P038','2024-01-11 09:47:21',2,294.440000,147.220000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00032','C0109','P038','2024-11-07 01:47:33',4,588.880000,147.220000),
 	 ('T00251','C0004','P038','2024-08-03 06:21:11',3,441.660000,147.220000),
 	 ('T00323','C0082','P038','2024-09-22 07:51:55',4,588.880000,147.220000),
@@ -591,7 +591,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00728','C0160','P038','2024-02-08 22:57:38',1,147.220000,147.220000),
 	 ('T00785','C0159','P038','2024-03-26 00:51:36',1,147.220000,147.220000),
 	 ('T00814','C0093','P038','2024-09-08 16:26:03',1,147.220000,147.220000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00863','C0008','P038','2024-11-08 20:46:29',1,147.220000,147.220000),
 	 ('T00913','C0117','P038','2024-02-08 17:57:52',1,147.220000,147.220000),
 	 ('T00022','C0061','P085','2024-08-19 08:16:57',3,1249.050000,416.350000),
@@ -602,7 +602,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00475','C0145','P085','2024-09-28 22:39:52',2,832.700000,416.350000),
 	 ('T00504','C0021','P085','2024-04-05 03:20:25',1,416.350000,416.350000),
 	 ('T00829','C0099','P085','2024-12-23 18:22:03',4,1665.400000,416.350000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00023','C0012','P061','2024-06-18 10:55:39',4,627.840000,156.960000),
 	 ('T00128','C0167','P061','2024-10-01 14:05:25',3,470.880000,156.960000),
 	 ('T00361','C0052','P061','2024-09-01 11:18:51',4,627.840000,156.960000),
@@ -613,7 +613,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00553','C0038','P061','2024-12-12 18:55:55',1,156.960000,156.960000),
 	 ('T00655','C0182','P061','2024-04-28 02:14:05',4,627.840000,156.960000),
 	 ('T00696','C0065','P061','2024-03-05 18:21:47',3,470.880000,156.960000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00731','C0200','P061','2024-07-15 20:36:28',4,627.840000,156.960000),
 	 ('T00791','C0052','P061','2024-01-09 13:32:17',2,313.920000,156.960000),
 	 ('T00795','C0178','P061','2024-12-21 00:45:52',1,156.960000,156.960000),
@@ -624,7 +624,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00100','C0197','P084','2024-05-08 15:48:20',3,1013.730000,337.910000),
 	 ('T00202','C0100','P084','2024-01-31 14:10:21',1,337.910000,337.910000),
 	 ('T00235','C0116','P084','2024-01-31 11:17:38',2,675.820000,337.910000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00265','C0122','P084','2024-03-19 00:50:12',1,337.910000,337.910000),
 	 ('T00346','C0149','P084','2024-04-09 16:45:10',4,1351.640000,337.910000),
 	 ('T00444','C0127','P084','2024-02-08 03:30:38',1,337.910000,337.910000),
@@ -635,7 +635,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00958','C0026','P084','2024-10-07 21:52:59',3,1013.730000,337.910000),
 	 ('T00990','C0195','P084','2024-08-18 21:30:57',2,675.820000,337.910000),
 	 ('T00025','C0027','P003','2024-10-11 21:32:34',4,176.480000,44.120000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00102','C0153','P003','2024-07-20 16:04:49',2,88.240000,44.120000),
 	 ('T00242','C0178','P003','2024-10-08 06:27:20',1,44.120000,44.120000),
 	 ('T00381','C0109','P003','2024-08-16 19:39:33',4,176.480000,44.120000),
@@ -646,7 +646,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00686','C0012','P003','2024-05-12 12:53:40',4,176.480000,44.120000),
 	 ('T00826','C0169','P003','2024-07-20 11:22:47',2,88.240000,44.120000),
 	 ('T00914','C0094','P003','2024-03-10 12:10:40',2,88.240000,44.120000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00991','C0111','P003','2024-01-26 22:34:43',3,132.360000,44.120000),
 	 ('T00026','C0136','P051','2024-02-01 08:58:02',3,195.480000,65.160000),
 	 ('T00044','C0046','P051','2024-03-09 09:06:10',3,195.480000,65.160000),
@@ -657,7 +657,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00590','C0157','P051','2024-05-04 20:38:52',2,130.320000,65.160000),
 	 ('T00607','C0175','P051','2024-10-04 01:18:02',4,260.640000,65.160000),
 	 ('T00856','C0043','P051','2024-09-19 14:24:09',2,130.320000,65.160000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00957','C0076','P051','2024-02-21 04:21:27',3,195.480000,65.160000),
 	 ('T00027','C0124','P086','2024-03-30 21:17:42',2,881.400000,440.700000),
 	 ('T00069','C0021','P086','2024-01-13 00:48:20',4,1762.800000,440.700000),
@@ -668,7 +668,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00691','C0171','P086','2024-01-13 11:31:31',3,1322.100000,440.700000),
 	 ('T00813','C0006','P086','2024-10-07 04:07:35',3,1322.100000,440.700000),
 	 ('T00896','C0093','P086','2024-03-26 18:01:53',1,440.700000,440.700000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00028','C0106','P047','2024-11-27 05:40:32',2,318.660000,159.330000),
 	 ('T00047','C0136','P047','2024-04-23 17:09:27',4,637.320000,159.330000),
 	 ('T00107','C0175','P047','2024-09-25 20:31:49',3,477.990000,159.330000),
@@ -679,7 +679,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00531','C0022','P047','2024-07-10 07:04:02',1,159.330000,159.330000),
 	 ('T00539','C0159','P047','2024-12-13 17:21:14',4,637.320000,159.330000),
 	 ('T00897','C0195','P047','2024-04-30 14:23:08',3,477.990000,159.330000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00029','C0193','P068','2024-02-12 03:10:36',3,1341.690000,447.230000),
 	 ('T00071','C0059','P068','2024-10-24 00:10:41',1,447.230000,447.230000),
 	 ('T00118','C0082','P068','2024-11-30 07:11:48',3,1341.690000,447.230000),
@@ -690,7 +690,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00425','C0008','P068','2024-08-01 14:20:03',1,447.230000,447.230000),
 	 ('T00447','C0035','P068','2024-09-30 17:00:33',3,1341.690000,447.230000),
 	 ('T00450','C0104','P068','2024-08-23 02:14:14',1,447.230000,447.230000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00833','C0187','P068','2024-01-09 11:36:08',3,1341.690000,447.230000),
 	 ('T00030','C0185','P092','2024-08-20 05:30:54',3,1167.600000,389.200000),
 	 ('T00340','C0098','P092','2024-07-02 05:35:21',2,778.400000,389.200000),
@@ -701,7 +701,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00652','C0149','P092','2024-04-27 01:00:06',4,1556.800000,389.200000),
 	 ('T00676','C0081','P092','2024-09-04 02:55:21',4,1556.800000,389.200000),
 	 ('T00678','C0142','P092','2024-12-24 20:00:42',3,1167.600000,389.200000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00031','C0093','P076','2024-08-31 18:20:26',3,1287.870000,429.290000),
 	 ('T00106','C0158','P076','2024-09-12 09:25:47',4,1717.160000,429.290000),
 	 ('T00149','C0093','P076','2024-07-13 13:50:21',4,1717.160000,429.290000),
@@ -712,7 +712,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00709','C0175','P076','2024-09-30 05:29:31',1,429.290000,429.290000),
 	 ('T00754','C0143','P076','2024-01-30 13:30:24',3,1287.870000,429.290000),
 	 ('T00894','C0155','P076','2024-09-12 09:37:09',2,858.580000,429.290000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00033','C0099','P036','2024-12-17 22:52:47',2,745.100000,372.550000),
 	 ('T00080','C0139','P036','2024-04-09 07:47:04',1,372.550000,372.550000),
 	 ('T00312','C0092','P036','2024-01-27 16:35:59',1,372.550000,372.550000),
@@ -723,7 +723,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00517','C0010','P036','2024-11-16 18:14:23',3,1117.650000,372.550000),
 	 ('T00616','C0101','P036','2024-12-07 12:23:24',2,745.100000,372.550000),
 	 ('T00659','C0013','P036','2024-11-03 05:30:39',3,1117.650000,372.550000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00690','C0029','P036','2024-12-26 01:49:16',3,1117.650000,372.550000),
 	 ('T00925','C0093','P036','2024-04-04 03:50:45',1,372.550000,372.550000),
 	 ('T00036','C0035','P013','2024-01-17 12:40:30',1,114.200000,114.200000),
@@ -734,7 +734,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00544','C0075','P013','2024-06-13 07:28:26',3,342.600000,114.200000),
 	 ('T00560','C0069','P013','2024-05-09 09:15:59',3,342.600000,114.200000),
 	 ('T00697','C0084','P013','2024-10-16 06:10:29',3,342.600000,114.200000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00738','C0157','P013','2024-03-19 16:14:11',3,342.600000,114.200000),
 	 ('T00803','C0197','P013','2024-01-13 04:52:09',4,456.800000,114.200000),
 	 ('T00919','C0091','P013','2024-03-10 12:56:52',3,342.600000,114.200000),
@@ -745,7 +745,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00404','C0022','P058','2024-09-17 15:12:23',2,315.240000,157.620000),
 	 ('T00416','C0152','P058','2024-01-13 10:46:55',1,157.620000,157.620000),
 	 ('T00471','C0102','P058','2024-01-12 17:34:27',4,630.480000,157.620000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00566','C0139','P058','2024-07-30 11:43:57',2,315.240000,157.620000),
 	 ('T00662','C0118','P058','2024-11-08 12:43:10',1,157.620000,157.620000),
 	 ('T00667','C0047','P058','2024-04-26 14:16:50',2,315.240000,157.620000),
@@ -756,7 +756,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00191','C0172','P050','2024-11-21 12:52:03',1,437.650000,437.650000),
 	 ('T00328','C0085','P050','2024-09-04 11:39:30',3,1312.950000,437.650000),
 	 ('T00345','C0140','P050','2024-08-07 09:24:39',4,1750.600000,437.650000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00362','C0096','P050','2024-01-31 07:07:22',2,875.300000,437.650000),
 	 ('T00542','C0098','P050','2024-04-17 00:48:43',1,437.650000,437.650000),
 	 ('T00718','C0007','P050','2024-02-20 09:22:52',1,437.650000,437.650000),
@@ -767,7 +767,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00979','C0112','P050','2024-05-08 03:42:39',3,1312.950000,437.650000),
 	 ('T00984','C0156','P050','2024-05-04 11:33:18',4,1750.600000,437.650000),
 	 ('T00040','C0177','P030','2024-06-27 19:13:16',4,1111.440000,277.860000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00268','C0170','P030','2024-05-20 10:53:24',1,277.860000,277.860000),
 	 ('T00303','C0085','P030','2024-10-11 20:08:31',1,277.860000,277.860000),
 	 ('T00491','C0136','P030','2024-06-07 08:52:46',4,1111.440000,277.860000),
@@ -778,7 +778,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00938','C0087','P030','2024-02-21 18:51:05',3,833.580000,277.860000),
 	 ('T00042','C0189','P025','2024-12-21 02:16:46',2,569.240000,284.620000),
 	 ('T00074','C0041','P025','2024-03-10 02:20:47',3,853.860000,284.620000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00304','C0174','P025','2024-12-12 13:59:40',1,284.620000,284.620000),
 	 ('T00331','C0005','P025','2024-05-05 13:03:41',3,853.860000,284.620000),
 	 ('T00456','C0004','P025','2024-12-12 03:38:36',2,569.240000,284.620000),
@@ -789,7 +789,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00832','C0064','P025','2024-05-07 01:08:19',3,853.860000,284.620000),
 	 ('T00842','C0055','P025','2024-01-24 06:58:00',4,1138.480000,284.620000),
 	 ('T00864','C0096','P025','2024-08-22 05:45:56',4,1138.480000,284.620000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00043','C0049','P027','2024-03-02 16:59:31',4,916.240000,229.060000),
 	 ('T00141','C0039','P027','2024-07-08 19:55:52',3,687.180000,229.060000),
 	 ('T00178','C0173','P027','2024-01-05 13:14:07',2,458.120000,229.060000),
@@ -800,7 +800,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00739','C0098','P027','2024-04-26 07:31:56',2,458.120000,229.060000),
 	 ('T00787','C0026','P027','2024-06-04 00:03:44',4,916.240000,229.060000),
 	 ('T00871','C0084','P027','2024-03-12 11:15:01',4,916.240000,229.060000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00951','C0197','P027','2024-12-27 18:20:31',2,458.120000,229.060000),
 	 ('T00045','C0113','P078','2024-07-09 02:53:14',4,164.720000,41.180000),
 	 ('T00123','C0113','P078','2024-07-25 17:05:14',2,82.360000,41.180000),
@@ -811,7 +811,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00522','C0160','P078','2024-03-03 09:40:08',4,164.720000,41.180000),
 	 ('T00592','C0060','P078','2024-09-03 07:19:28',2,82.360000,41.180000),
 	 ('T00635','C0166','P078','2024-07-25 02:34:05',4,164.720000,41.180000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00816','C0172','P078','2024-09-25 06:56:25',2,82.360000,41.180000),
 	 ('T00048','C0043','P100','2024-04-23 22:46:40',2,252.680000,126.340000),
 	 ('T00115','C0161','P100','2024-03-10 02:22:50',1,126.340000,126.340000),
@@ -822,7 +822,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00049','C0148','P039','2024-06-23 14:05:49',3,1291.770000,430.590000),
 	 ('T00086','C0168','P039','2024-07-14 14:57:44',3,1291.770000,430.590000),
 	 ('T00090','C0072','P039','2024-03-10 16:04:33',4,1722.360000,430.590000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00198','C0048','P039','2024-09-17 07:53:30',1,430.590000,430.590000),
 	 ('T00256','C0192','P039','2024-07-30 12:47:07',3,1291.770000,430.590000),
 	 ('T00348','C0005','P039','2024-03-15 04:08:59',2,861.180000,430.590000),
@@ -833,7 +833,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00555','C0088','P039','2024-12-15 04:43:29',1,430.590000,430.590000),
 	 ('T00665','C0053','P039','2024-11-01 12:16:45',4,1722.360000,430.590000),
 	 ('T00050','C0124','P016','2024-10-07 07:58:38',1,330.050000,330.050000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00056','C0192','P016','2024-02-07 14:37:55',1,330.050000,330.050000),
 	 ('T00167','C0153','P016','2024-07-05 11:53:41',3,990.150000,330.050000),
 	 ('T00368','C0190','P016','2024-05-16 09:05:38',4,1320.200000,330.050000),
@@ -844,7 +844,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00942','C0105','P016','2024-06-19 06:55:10',4,1320.200000,330.050000),
 	 ('T00051','C0097','P022','2024-03-23 05:58:54',1,137.540000,137.540000),
 	 ('T00160','C0065','P022','2024-07-29 06:59:14',3,412.620000,137.540000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00252','C0154','P022','2024-06-12 22:59:30',1,137.540000,137.540000),
 	 ('T00271','C0035','P022','2024-04-29 19:45:24',3,412.620000,137.540000),
 	 ('T00296','C0179','P022','2024-07-23 09:15:48',3,412.620000,137.540000),
@@ -855,7 +855,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00612','C0140','P022','2024-10-15 18:21:07',1,137.540000,137.540000),
 	 ('T00742','C0124','P022','2024-03-23 05:53:50',2,275.080000,137.540000),
 	 ('T00761','C0199','P022','2024-10-01 05:57:09',4,550.160000,137.540000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00886','C0104','P022','2024-10-28 14:36:09',3,412.620000,137.540000),
 	 ('T00895','C0121','P022','2024-05-03 18:35:03',3,412.620000,137.540000),
 	 ('T00932','C0001','P022','2024-09-17 09:01:18',3,412.620000,137.540000),
@@ -866,7 +866,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00457','C0158','P021','2024-07-18 20:01:21',1,335.840000,335.840000),
 	 ('T00687','C0182','P021','2024-03-31 22:56:31',4,1343.360000,335.840000),
 	 ('T00737','C0157','P021','2024-05-19 06:37:56',1,335.840000,335.840000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00763','C0185','P021','2024-04-14 23:09:04',3,1007.520000,335.840000),
 	 ('T00807','C0086','P021','2024-10-23 17:24:22',1,335.840000,335.840000),
 	 ('T00857','C0080','P021','2024-03-12 15:48:24',3,1007.520000,335.840000),
@@ -877,7 +877,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00529','C0152','P072','2024-10-21 06:20:03',3,1198.020000,399.340000),
 	 ('T00929','C0068','P072','2024-12-24 23:45:11',3,1198.020000,399.340000),
 	 ('T00994','C0040','P072','2024-01-06 21:49:35',2,798.680000,399.340000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00057','C0062','P059','2024-07-03 07:10:58',3,909.600000,303.200000),
 	 ('T00062','C0009','P059','2024-10-12 06:41:00',1,303.200000,303.200000),
 	 ('T00131','C0029','P059','2024-06-13 02:56:04',1,303.200000,303.200000),
@@ -888,7 +888,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00377','C0179','P059','2024-01-22 19:36:33',1,303.200000,303.200000),
 	 ('T00400','C0175','P059','2024-04-24 00:16:33',2,606.400000,303.200000),
 	 ('T00638','C0100','P059','2024-04-27 05:29:48',3,909.600000,303.200000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00674','C0024','P059','2024-04-14 01:19:59',3,909.600000,303.200000),
 	 ('T00702','C0104','P059','2024-05-20 13:15:04',4,1212.800000,303.200000),
 	 ('T00705','C0027','P059','2024-06-08 07:23:21',4,1212.800000,303.200000),
@@ -899,7 +899,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00906','C0129','P059','2024-10-10 12:25:03',4,1212.800000,303.200000),
 	 ('T00948','C0098','P059','2024-01-20 12:30:32',2,606.400000,303.200000),
 	 ('T00058','C0106','P031','2024-09-18 09:38:21',2,392.800000,196.400000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00653','C0028','P031','2024-07-12 13:17:08',4,785.600000,196.400000),
 	 ('T00792','C0105','P031','2024-01-11 06:02:11',1,196.400000,196.400000),
 	 ('T00815','C0008','P031','2024-03-26 20:30:49',2,392.800000,196.400000),
@@ -910,7 +910,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00693','C0122','P042','2024-12-17 19:17:17',4,1517.760000,379.440000),
 	 ('T00695','C0090','P042','2024-09-11 19:59:24',3,1138.320000,379.440000),
 	 ('T00861','C0141','P042','2024-09-26 21:52:56',4,1517.760000,379.440000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00973','C0084','P042','2024-07-12 22:15:21',3,1138.320000,379.440000),
 	 ('T00060','C0054','P074','2024-05-06 13:06:06',4,1182.320000,295.580000),
 	 ('T00152','C0144','P074','2024-04-17 01:46:23',4,1182.320000,295.580000),
@@ -921,7 +921,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00382','C0163','P074','2024-03-01 16:19:14',4,1182.320000,295.580000),
 	 ('T00438','C0037','P074','2024-07-15 16:33:41',3,886.740000,295.580000),
 	 ('T00537','C0012','P074','2024-12-25 08:03:34',1,295.580000,295.580000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00743','C0172','P074','2024-01-21 13:21:23',3,886.740000,295.580000),
 	 ('T00796','C0166','P074','2024-08-12 05:20:19',3,886.740000,295.580000),
 	 ('T00839','C0089','P074','2024-12-03 21:30:15',3,886.740000,295.580000),
@@ -932,7 +932,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00320','C0179','P032','2024-04-06 16:23:53',3,1465.890000,488.630000),
 	 ('T00465','C0173','P032','2024-05-24 16:11:23',2,977.260000,488.630000),
 	 ('T00499','C0065','P032','2024-07-18 02:51:22',4,1954.520000,488.630000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00513','C0023','P032','2024-11-11 10:44:12',2,977.260000,488.630000),
 	 ('T00577','C0082','P032','2024-10-19 00:46:52',2,977.260000,488.630000),
 	 ('T00821','C0050','P032','2024-04-04 14:19:01',2,977.260000,488.630000),
@@ -943,7 +943,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00397','C0187','P009','2024-07-04 05:29:36',1,325.010000,325.010000),
 	 ('T00477','C0162','P009','2024-10-14 15:50:39',3,975.030000,325.010000),
 	 ('T00530','C0079','P009','2024-05-02 00:31:22',2,650.020000,325.010000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00651','C0172','P009','2024-06-12 22:33:14',2,650.020000,325.010000),
 	 ('T00677','C0100','P009','2024-03-05 23:39:40',4,1300.040000,325.010000),
 	 ('T00065','C0049','P081','2024-02-01 19:05:13',1,66.320000,66.320000),
@@ -954,7 +954,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00387','C0173','P081','2024-05-18 16:57:20',3,198.960000,66.320000),
 	 ('T00486','C0111','P081','2024-07-03 07:27:54',4,265.280000,66.320000),
 	 ('T00512','C0183','P081','2024-01-08 13:41:10',1,66.320000,66.320000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00668','C0053','P081','2024-01-21 08:08:41',2,132.640000,66.320000),
 	 ('T00715','C0033','P081','2024-07-05 23:41:15',2,132.640000,66.320000),
 	 ('T00898','C0108','P081','2024-07-26 21:44:47',1,66.320000,66.320000),
@@ -965,7 +965,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00521','C0148','P011','2024-06-11 02:31:18',4,1044.800000,261.200000),
 	 ('T00601','C0161','P011','2024-08-15 03:06:41',1,261.200000,261.200000),
 	 ('T00698','C0119','P011','2024-12-26 21:34:07',1,261.200000,261.200000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00712','C0134','P011','2024-09-23 06:44:40',3,783.600000,261.200000),
 	 ('T00848','C0108','P011','2024-09-25 01:50:13',2,522.400000,261.200000),
 	 ('T00868','C0039','P011','2024-09-08 14:32:15',4,1044.800000,261.200000),
@@ -976,7 +976,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00117','C0164','P096','2024-03-25 07:41:04',2,614.940000,307.470000),
 	 ('T00279','C0059','P096','2024-09-09 19:42:23',1,307.470000,307.470000),
 	 ('T00350','C0020','P096','2024-01-30 00:57:29',3,922.410000,307.470000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00467','C0045','P096','2024-03-16 04:08:29',3,922.410000,307.470000),
 	 ('T00610','C0021','P096','2024-10-12 03:25:58',2,614.940000,307.470000),
 	 ('T00645','C0007','P096','2024-08-25 08:05:44',3,922.410000,307.470000),
@@ -987,7 +987,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00764','C0026','P096','2024-10-09 13:52:57',4,1229.880000,307.470000),
 	 ('T00794','C0161','P096','2024-05-20 06:17:43',1,307.470000,307.470000),
 	 ('T00819','C0075','P096','2024-10-08 21:31:59',2,614.940000,307.470000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00070','C0051','P017','2024-12-11 13:46:30',4,1879.080000,469.770000),
 	 ('T00180','C0073','P017','2024-03-11 15:12:50',2,939.540000,469.770000),
 	 ('T00224','C0171','P017','2024-07-06 23:53:24',4,1879.080000,469.770000),
@@ -998,7 +998,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00571','C0137','P017','2024-02-01 15:50:43',2,939.540000,469.770000),
 	 ('T00682','C0131','P017','2024-04-01 10:10:17',2,939.540000,469.770000),
 	 ('T00971','C0023','P017','2024-06-22 21:26:26',1,469.770000,469.770000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00072','C0167','P048','2024-05-23 19:17:40',3,1249.200000,416.400000),
 	 ('T00280','C0175','P048','2024-05-09 17:38:43',2,832.800000,416.400000),
 	 ('T00298','C0042','P048','2024-11-09 20:42:09',1,416.400000,416.400000),
@@ -1009,7 +1009,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00550','C0154','P048','2024-04-24 05:30:39',3,1249.200000,416.400000),
 	 ('T00608','C0025','P048','2024-06-13 22:53:33',2,832.800000,416.400000),
 	 ('T00657','C0100','P048','2024-08-04 15:35:01',1,416.400000,416.400000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00771','C0200','P048','2024-09-10 09:50:48',4,1665.600000,416.400000),
 	 ('T00786','C0174','P048','2024-08-07 22:11:19',4,1665.600000,416.400000),
 	 ('T00811','C0141','P048','2024-06-03 23:59:14',4,1665.600000,416.400000),
@@ -1020,7 +1020,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00351','C0169','P052','2024-12-03 17:26:43',4,1419.240000,354.810000),
 	 ('T00460','C0099','P052','2024-05-02 00:25:40',2,709.620000,354.810000),
 	 ('T00988','C0165','P052','2024-09-06 06:43:42',4,1419.240000,354.810000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00076','C0141','P065','2024-09-23 20:32:31',3,1282.830000,427.610000),
 	 ('T00110','C0084','P065','2024-08-13 10:30:05',2,855.220000,427.610000),
 	 ('T00139','C0118','P065','2024-04-13 02:29:41',1,427.610000,427.610000),
@@ -1031,7 +1031,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00569','C0107','P065','2024-10-22 12:54:23',3,1282.830000,427.610000),
 	 ('T00585','C0056','P065','2024-01-31 08:26:51',2,855.220000,427.610000),
 	 ('T00888','C0055','P065','2024-05-24 09:36:07',2,855.220000,427.610000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00892','C0022','P065','2024-04-06 10:33:06',4,1710.440000,427.610000),
 	 ('T00077','C0192','P063','2024-06-15 17:12:53',3,100.770000,33.590000),
 	 ('T00104','C0174','P063','2024-01-12 03:22:30',3,100.770000,33.590000),
@@ -1042,7 +1042,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00459','C0075','P063','2024-01-17 01:36:03',4,134.360000,33.590000),
 	 ('T00760','C0090','P063','2024-01-03 18:25:39',1,33.590000,33.590000),
 	 ('T00853','C0098','P063','2024-12-23 18:36:04',4,134.360000,33.590000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00078','C0011','P089','2024-03-23 02:59:36',3,662.730000,220.910000),
 	 ('T00153','C0094','P089','2024-11-05 07:32:47',3,662.730000,220.910000),
 	 ('T00245','C0120','P089','2024-04-28 20:01:47',4,883.640000,220.910000),
@@ -1053,7 +1053,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00082','C0127','P088','2024-08-25 05:43:29',1,263.550000,263.550000),
 	 ('T00130','C0191','P088','2024-08-15 13:06:00',1,263.550000,263.550000),
 	 ('T00424','C0114','P088','2024-09-23 04:35:24',4,1054.200000,263.550000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00461','C0072','P088','2024-09-17 03:59:29',1,263.550000,263.550000),
 	 ('T00556','C0050','P088','2024-11-17 17:56:48',3,790.650000,263.550000),
 	 ('T00751','C0096','P088','2024-03-11 17:07:12',2,527.100000,263.550000),
@@ -1064,7 +1064,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00225','C0126','P066','2024-06-20 04:11:50',3,1011.660000,337.220000),
 	 ('T00267','C0037','P066','2024-06-30 00:11:05',3,1011.660000,337.220000),
 	 ('T00505','C0147','P066','2024-07-29 19:28:48',2,674.440000,337.220000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00596','C0175','P066','2024-09-30 11:36:49',1,337.220000,337.220000),
 	 ('T00609','C0094','P066','2024-03-19 01:04:53',1,337.220000,337.220000),
 	 ('T00623','C0146','P066','2024-07-12 10:03:14',3,1011.660000,337.220000),
@@ -1075,7 +1075,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00114','C0068','P015','2024-05-28 18:07:55',1,158.930000,158.930000),
 	 ('T00333','C0101','P015','2024-12-28 11:00:00',3,476.790000,158.930000),
 	 ('T00526','C0156','P015','2024-01-01 16:46:56',4,635.720000,158.930000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00599','C0013','P015','2024-08-15 20:46:42',1,158.930000,158.930000),
 	 ('T00801','C0021','P015','2024-02-06 03:27:17',1,158.930000,158.930000),
 	 ('T00893','C0101','P015','2024-03-24 16:37:25',1,158.930000,158.930000),
@@ -1086,7 +1086,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00433','C0036','P001','2024-05-05 05:01:18',2,338.600000,169.300000),
 	 ('T00449','C0191','P001','2024-12-12 12:17:38',1,169.300000,169.300000),
 	 ('T00545','C0105','P001','2024-06-24 10:10:17',2,338.600000,169.300000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00732','C0045','P001','2024-08-13 10:42:48',2,338.600000,169.300000),
 	 ('T00758','C0017','P001','2024-05-28 14:47:15',3,507.900000,169.300000),
 	 ('T00095','C0189','P093','2024-09-13 18:57:35',2,609.880000,304.940000),
@@ -1097,7 +1097,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00629','C0100','P093','2024-04-06 10:30:48',1,304.940000,304.940000),
 	 ('T00630','C0031','P093','2024-10-08 23:58:14',2,609.880000,304.940000),
 	 ('T00899','C0141','P093','2024-04-30 17:03:34',1,304.940000,304.940000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00096','C0161','P073','2024-03-23 00:07:54',3,80.970000,26.990000),
 	 ('T00277','C0029','P073','2024-10-01 17:22:05',4,107.960000,26.990000),
 	 ('T00317','C0111','P073','2024-06-19 15:07:10',4,107.960000,26.990000),
@@ -1108,7 +1108,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00583','C0198','P073','2024-10-04 18:31:12',1,26.990000,26.990000),
 	 ('T00661','C0049','P073','2024-05-25 20:16:42',2,53.980000,26.990000),
 	 ('T00955','C0149','P073','2024-08-29 14:05:41',2,53.980000,26.990000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00099','C0103','P006','2024-09-30 23:30:02',1,121.320000,121.320000),
 	 ('T00134','C0051','P006','2024-01-03 04:06:49',2,242.640000,121.320000),
 	 ('T00143','C0003','P006','2024-06-16 05:24:04',3,363.960000,121.320000),
@@ -1119,7 +1119,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00389','C0081','P006','2024-01-20 04:23:56',3,363.960000,121.320000),
 	 ('T00478','C0124','P006','2024-04-12 12:07:07',4,485.280000,121.320000),
 	 ('T00506','C0053','P006','2024-09-18 23:31:26',1,121.320000,121.320000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00613','C0037','P006','2024-09-30 18:17:00',3,363.960000,121.320000),
 	 ('T00679','C0138','P006','2024-09-06 20:35:41',4,485.280000,121.320000),
 	 ('T00772','C0104','P006','2024-06-16 21:51:16',2,242.640000,121.320000),
@@ -1130,7 +1130,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00466','C0034','P055','2024-10-23 16:57:26',4,514.120000,128.530000),
 	 ('T00639','C0109','P055','2024-03-12 03:33:00',3,385.590000,128.530000),
 	 ('T00822','C0011','P055','2024-05-08 18:21:34',3,385.590000,128.530000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00850','C0029','P055','2024-03-03 06:11:38',2,257.060000,128.530000),
 	 ('T00872','C0088','P055','2024-06-02 13:27:11',1,128.530000,128.530000),
 	 ('T00941','C0041','P055','2024-07-20 10:39:52',1,128.530000,128.530000),
@@ -1141,7 +1141,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00636','C0054','P064','2024-01-28 04:32:55',3,1357.260000,452.420000),
 	 ('T00671','C0013','P064','2024-08-23 09:19:16',1,452.420000,452.420000),
 	 ('T00688','C0116','P064','2024-05-22 04:00:43',1,452.420000,452.420000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00889','C0200','P064','2024-10-03 04:33:16',3,1357.260000,452.420000),
 	 ('T00972','C0106','P064','2024-11-01 06:54:57',3,1357.260000,452.420000),
 	 ('T00999','C0024','P064','2024-02-24 12:09:53',1,452.420000,452.420000),
@@ -1152,7 +1152,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00716','C0055','P090','2024-04-02 02:03:25',2,330.600000,165.300000),
 	 ('T00720','C0126','P090','2024-01-08 11:31:27',1,165.300000,165.300000),
 	 ('T00917','C0113','P090','2024-01-18 09:04:29',2,330.600000,165.300000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00937','C0116','P090','2024-10-30 08:16:03',1,165.300000,165.300000),
 	 ('T00119','C0147','P018','2024-03-13 02:57:13',1,436.890000,436.890000),
 	 ('T00411','C0064','P018','2024-02-06 15:02:30',4,1747.560000,436.890000),
@@ -1163,7 +1163,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00870','C0187','P018','2024-05-02 14:16:38',4,1747.560000,436.890000),
 	 ('T00120','C0156','P083','2024-02-27 16:09:00',1,455.720000,455.720000),
 	 ('T00133','C0194','P083','2024-09-26 23:48:07',3,1367.160000,455.720000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00138','C0051','P083','2024-04-26 22:10:35',4,1822.880000,455.720000),
 	 ('T00168','C0023','P083','2024-09-26 17:22:30',3,1367.160000,455.720000),
 	 ('T00289','C0141','P083','2024-12-03 21:22:02',3,1367.160000,455.720000),
@@ -1174,7 +1174,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00670','C0046','P083','2024-08-03 21:42:27',2,911.440000,455.720000),
 	 ('T00831','C0184','P083','2024-05-19 18:25:44',2,911.440000,455.720000),
 	 ('T00845','C0154','P083','2023-12-31 15:44:04',2,911.440000,455.720000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00887','C0066','P083','2024-08-28 20:52:33',3,1367.160000,455.720000),
 	 ('T00121','C0168','P043','2024-10-23 06:09:51',4,1617.600000,404.400000),
 	 ('T00151','C0131','P043','2024-12-19 17:58:21',2,808.800000,404.400000),
@@ -1185,7 +1185,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00790','C0084','P043','2024-08-13 23:52:47',1,404.400000,404.400000),
 	 ('T00837','C0139','P043','2024-09-20 04:55:33',2,808.800000,404.400000),
 	 ('T00841','C0019','P043','2024-07-01 13:07:47',1,404.400000,404.400000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00907','C0160','P043','2024-02-15 17:18:56',4,1617.600000,404.400000),
 	 ('T00931','C0114','P043','2024-09-04 22:08:05',4,1617.600000,404.400000),
 	 ('T00122','C0084','P035','2024-09-12 13:59:35',2,61.180000,30.590000),
@@ -1196,7 +1196,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00765','C0025','P035','2024-01-31 19:48:04',1,30.590000,30.590000),
 	 ('T00799','C0061','P035','2024-12-10 16:00:56',1,30.590000,30.590000),
 	 ('T00804','C0134','P035','2024-12-10 06:40:49',4,122.360000,30.590000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00812','C0003','P035','2024-02-18 02:50:37',4,122.360000,30.590000),
 	 ('T00956','C0099','P035','2024-05-28 01:25:36',1,30.590000,30.590000),
 	 ('T00125','C0122','P033','2024-01-26 05:19:40',2,128.500000,64.250000),
@@ -1207,7 +1207,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00532','C0030','P033','2024-04-11 09:53:33',3,192.750000,64.250000),
 	 ('T00755','C0032','P033','2024-07-12 08:20:42',3,192.750000,64.250000),
 	 ('T00905','C0034','P033','2024-09-22 00:00:09',2,128.500000,64.250000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00126','C0143','P014','2024-12-05 07:49:45',4,105.040000,26.260000),
 	 ('T00207','C0034','P014','2024-06-19 02:53:27',3,78.780000,26.260000),
 	 ('T00865','C0094','P014','2024-04-28 10:46:07',3,78.780000,26.260000),
@@ -1218,7 +1218,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00641','C0173','P004','2024-01-02 15:02:39',3,287.070000,95.690000),
 	 ('T00747','C0137','P004','2024-12-23 23:09:50',1,95.690000,95.690000),
 	 ('T00860','C0008','P004','2024-08-22 03:25:32',2,191.380000,95.690000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00891','C0091','P004','2024-07-24 23:11:16',4,382.760000,95.690000),
 	 ('T00132','C0105','P029','2024-09-03 19:50:06',4,1734.560000,433.640000),
 	 ('T00213','C0165','P029','2024-02-15 07:07:11',3,1300.920000,433.640000),
@@ -1229,7 +1229,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00495','C0027','P029','2024-04-07 16:46:45',2,867.280000,433.640000),
 	 ('T00541','C0082','P029','2024-07-25 15:20:14',2,867.280000,433.640000),
 	 ('T00554','C0087','P029','2024-04-13 20:04:25',4,1734.560000,433.640000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00576','C0100','P029','2024-09-04 20:49:41',4,1734.560000,433.640000),
 	 ('T00593','C0120','P029','2024-04-01 07:30:59',2,867.280000,433.640000),
 	 ('T00673','C0102','P029','2024-09-01 21:40:35',3,1300.920000,433.640000),
@@ -1240,7 +1240,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00975','C0116','P029','2024-06-16 15:47:00',2,867.280000,433.640000),
 	 ('T00135','C0075','P097','2024-04-29 19:03:50',3,958.020000,319.340000),
 	 ('T00173','C0182','P097','2024-05-09 17:32:28',4,1277.360000,319.340000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00182','C0122','P097','2024-05-08 22:24:58',3,958.020000,319.340000),
 	 ('T00278','C0077','P097','2024-09-26 16:10:17',1,319.340000,319.340000),
 	 ('T00354','C0070','P097','2024-05-15 00:22:27',4,1277.360000,319.340000),
@@ -1251,7 +1251,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00142','C0028','P080','2024-08-04 12:38:25',4,1214.000000,303.500000),
 	 ('T00150','C0166','P080','2024-10-22 12:08:25',1,303.500000,303.500000),
 	 ('T00171','C0028','P080','2024-09-19 03:29:48',1,303.500000,303.500000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00247','C0187','P080','2024-10-12 08:20:33',1,303.500000,303.500000),
 	 ('T00473','C0066','P080','2024-03-13 04:00:25',2,607.000000,303.500000),
 	 ('T00489','C0039','P080','2024-02-13 16:15:35',4,1214.000000,303.500000),
@@ -1262,7 +1262,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00147','C0117','P099','2024-08-05 20:03:50',4,1417.160000,354.290000),
 	 ('T00266','C0125','P099','2024-02-27 18:25:58',2,708.580000,354.290000),
 	 ('T00669','C0074','P099','2024-01-03 16:57:09',4,1417.160000,354.290000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00825','C0070','P099','2024-02-08 14:20:05',1,354.290000,354.290000),
 	 ('T00148','C0002','P019','2024-02-28 07:44:21',2,770.740000,385.370000),
 	 ('T00192','C0079','P019','2024-03-28 04:39:16',4,1541.480000,385.370000),
@@ -1273,7 +1273,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00525','C0178','P019','2024-10-21 20:29:28',3,1156.110000,385.370000),
 	 ('T00535','C0059','P019','2024-03-12 21:51:40',4,1541.480000,385.370000),
 	 ('T00595','C0138','P019','2024-07-11 20:27:51',4,1541.480000,385.370000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00836','C0076','P019','2024-04-25 14:43:34',1,385.370000,385.370000),
 	 ('T00976','C0109','P019','2024-08-07 01:34:06',2,770.740000,385.370000),
 	 ('T00154','C0040','P020','2023-12-31 06:53:54',4,1585.360000,396.340000),
@@ -1284,7 +1284,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00788','C0114','P020','2024-06-13 12:58:37',3,1189.020000,396.340000),
 	 ('T00843','C0102','P020','2024-08-08 19:49:54',2,792.680000,396.340000),
 	 ('T00903','C0182','P020','2024-01-29 19:25:10',4,1585.360000,396.340000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00911','C0067','P020','2024-06-14 21:37:11',3,1189.020000,396.340000),
 	 ('T00933','C0058','P020','2024-02-01 14:24:48',1,396.340000,396.340000),
 	 ('T00967','C0040','P020','2024-07-19 09:25:20',4,1585.360000,396.340000),
@@ -1295,7 +1295,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00878','C0165','P044','2024-09-24 21:15:21',3,56.460000,18.820000),
 	 ('T00159','C0163','P002','2024-10-12 03:12:30',4,1385.200000,346.300000),
 	 ('T00248','C0067','P002','2024-05-03 21:36:31',4,1385.200000,346.300000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00285','C0068','P002','2024-04-02 02:23:50',3,1038.900000,346.300000),
 	 ('T00402','C0031','P002','2024-11-24 17:22:38',2,692.600000,346.300000),
 	 ('T00648','C0003','P002','2024-08-24 18:54:04',4,1385.200000,346.300000),
@@ -1306,7 +1306,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00399','C0013','P056','2024-03-28 19:16:21',3,48.240000,16.080000),
 	 ('T00454','C0174','P056','2024-11-10 08:32:31',2,32.160000,16.080000),
 	 ('T00584','C0112','P056','2024-06-02 17:24:55',1,16.080000,16.080000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00774','C0095','P056','2024-01-07 14:19:49',2,32.160000,16.080000),
 	 ('T00916','C0099','P056','2024-11-10 19:32:15',4,64.320000,16.080000),
 	 ('T00949','C0169','P056','2024-02-16 14:52:24',4,64.320000,16.080000),
@@ -1317,7 +1317,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00369','C0151','P082','2024-12-24 11:40:24',4,223.960000,55.990000),
 	 ('T00373','C0179','P082','2024-02-07 20:28:19',2,111.980000,55.990000),
 	 ('T00398','C0069','P082','2024-03-14 17:22:52',1,55.990000,55.990000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00622','C0047','P082','2024-02-22 21:46:45',2,111.980000,55.990000),
 	 ('T00874','C0093','P082','2024-09-12 04:48:36',3,167.970000,55.990000),
 	 ('T00174','C0107','P012','2024-02-21 23:48:42',1,159.600000,159.600000),
@@ -1328,7 +1328,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00858','C0194','P012','2024-08-18 00:51:18',1,159.600000,159.600000),
 	 ('T00909','C0093','P012','2024-01-01 14:29:52',2,319.200000,159.600000),
 	 ('T00969','C0149','P012','2024-07-30 08:34:58',3,478.800000,159.600000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00176','C0164','P075','2024-10-20 16:20:50',1,497.760000,497.760000),
 	 ('T00360','C0108','P075','2024-05-29 17:04:29',3,1493.280000,497.760000),
 	 ('T00367','C0161','P075','2024-03-27 07:31:28',2,995.520000,497.760000),
@@ -1339,7 +1339,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00866','C0065','P075','2024-12-10 01:50:20',3,1493.280000,497.760000),
 	 ('T00876','C0044','P075','2024-10-22 02:45:04',2,995.520000,497.760000),
 	 ('T00928','C0082','P075','2024-09-06 18:39:07',4,1991.040000,497.760000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00177','C0099','P005','2024-06-14 08:41:48',3,1287.930000,429.310000),
 	 ('T00183','C0030','P005','2024-08-24 01:19:18',3,1287.930000,429.310000),
 	 ('T00437','C0143','P005','2024-09-11 20:41:10',4,1717.240000,429.310000),
@@ -1350,7 +1350,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00879','C0074','P005','2024-01-20 17:46:34',3,1287.930000,429.310000),
 	 ('T00185','C0108','P028','2024-03-07 03:54:06',4,942.320000,235.580000),
 	 ('T00229','C0038','P028','2024-06-29 11:39:11',3,706.740000,235.580000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00305','C0127','P028','2024-01-18 15:08:21',4,942.320000,235.580000),
 	 ('T00332','C0145','P028','2024-02-04 07:44:22',4,942.320000,235.580000),
 	 ('T00393','C0147','P028','2024-05-28 10:52:05',3,706.740000,235.580000),
@@ -1361,7 +1361,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00756','C0028','P028','2024-02-15 04:29:17',3,706.740000,235.580000),
 	 ('T00851','C0059','P028','2024-02-13 06:45:11',3,706.740000,235.580000),
 	 ('T00915','C0163','P028','2024-07-26 15:47:31',3,706.740000,235.580000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00196','C0104','P094','2024-07-11 17:39:59',2,894.680000,447.340000),
 	 ('T00370','C0143','P094','2024-07-17 08:52:39',3,1342.020000,447.340000),
 	 ('T00508','C0057','P094','2024-12-18 11:46:16',3,1342.020000,447.340000),
@@ -1372,7 +1372,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00912','C0148','P094','2024-10-02 16:00:54',4,1789.360000,447.340000),
 	 ('T00918','C0103','P094','2024-08-20 02:24:47',2,894.680000,447.340000),
 	 ('T00966','C0154','P094','2024-03-04 05:11:01',2,894.680000,447.340000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00974','C0143','P094','2024-12-18 17:13:17',3,1342.020000,447.340000),
 	 ('T00205','C0152','P079','2024-04-09 09:14:53',4,1669.480000,417.370000),
 	 ('T00274','C0196','P079','2024-08-28 19:56:53',1,417.370000,417.370000),
@@ -1383,7 +1383,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00617','C0048','P079','2024-01-14 03:22:21',3,1252.110000,417.370000),
 	 ('T00626','C0199','P079','2024-08-17 12:06:08',2,834.740000,417.370000),
 	 ('T00656','C0065','P079','2024-09-13 08:28:58',1,417.370000,417.370000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00713','C0135','P079','2024-01-22 02:25:06',2,834.740000,417.370000),
 	 ('T00745','C0090','P079','2024-06-22 14:35:43',2,834.740000,417.370000),
 	 ('T00746','C0104','P079','2024-07-19 14:35:31',4,1669.480000,417.370000),
@@ -1394,7 +1394,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00214','C0056','P024','2024-02-18 05:49:59',2,677.320000,338.660000),
 	 ('T00249','C0075','P024','2024-12-10 21:53:30',3,1015.980000,338.660000),
 	 ('T00528','C0053','P024','2024-08-28 04:01:48',4,1354.640000,338.660000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00817','C0108','P024','2024-10-02 22:07:40',2,677.320000,338.660000),
 	 ('T00847','C0004','P024','2024-10-24 16:28:30',1,338.660000,338.660000),
 	 ('T00219','C0019','P008','2024-08-22 23:44:44',1,146.850000,146.850000),
@@ -1405,7 +1405,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00757','C0022','P008','2024-09-03 03:11:42',2,293.700000,146.850000),
 	 ('T00781','C0182','P008','2024-05-06 19:24:04',1,146.850000,146.850000),
 	 ('T00934','C0154','P008','2024-09-19 14:18:33',2,293.700000,146.850000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00963','C0199','P008','2024-10-26 00:01:58',2,293.700000,146.850000),
 	 ('T01000','C0004','P008','2024-02-28 10:16:35',2,293.700000,146.850000),
 	 ('T00238','C0031','P091','2024-08-11 00:11:15',2,445.900000,222.950000),
@@ -1416,7 +1416,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00793','C0054','P091','2024-10-07 17:48:28',3,668.850000,222.950000),
 	 ('T00798','C0015','P091','2024-09-21 01:39:03',3,668.850000,222.950000),
 	 ('T00241','C0109','P071','2024-07-08 16:06:55',3,382.080000,127.360000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00441','C0133','P071','2024-02-03 08:15:00',4,509.440000,127.360000),
 	 ('T00559','C0134','P071','2024-04-28 14:16:10',1,127.360000,127.360000),
 	 ('T00591','C0161','P071','2024-07-05 10:29:31',3,382.080000,127.360000),
@@ -1427,7 +1427,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00244','C0158','P098','2024-01-04 14:19:41',1,299.930000,299.930000),
 	 ('T00302','C0051','P098','2024-07-23 12:30:30',1,299.930000,299.930000),
 	 ('T00412','C0126','P098','2024-11-08 14:50:40',2,599.860000,299.930000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00543','C0127','P098','2024-09-20 08:12:56',3,899.790000,299.930000),
 	 ('T00654','C0054','P098','2024-07-07 12:28:18',4,1199.720000,299.930000),
 	 ('T00849','C0115','P098','2024-01-31 09:08:09',2,599.860000,299.930000),
@@ -1438,7 +1438,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00557','C0008','P026','2024-03-11 03:22:29',2,128.760000,64.380000),
 	 ('T00562','C0121','P026','2024-07-06 11:32:13',1,64.380000,64.380000),
 	 ('T00578','C0143','P026','2024-03-30 23:37:50',3,193.140000,64.380000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00927','C0091','P026','2024-04-22 18:28:54',3,193.140000,64.380000),
 	 ('T00307','C0044','P045','2024-05-30 18:15:28',4,1927.120000,481.780000),
 	 ('T00502','C0181','P045','2024-04-12 14:44:42',1,481.780000,481.780000),
@@ -1449,7 +1449,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00734','C0132','P045','2024-09-29 16:20:32',2,963.560000,481.780000),
 	 ('T00947','C0022','P045','2024-08-11 12:13:35',2,963.560000,481.780000),
 	 ('T00318','C0098','P046','2024-01-09 16:35:54',1,366.070000,366.070000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00380','C0135','P046','2024-01-04 16:40:50',4,1464.280000,366.070000),
 	 ('T00464','C0188','P046','2024-05-16 11:23:37',2,732.140000,366.070000),
 	 ('T00500','C0145','P046','2024-06-17 14:12:01',3,1098.210000,366.070000),
@@ -1460,7 +1460,7 @@ INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","Trans
 	 ('T00379','C0004','P077','2024-12-23 14:13:52',4,1062.040000,265.510000),
 	 ('T00418','C0184','P077','2024-01-03 02:43:36',2,531.020000,265.510000),
 	 ('T00549','C0093','P077','2024-09-16 02:11:37',2,531.020000,265.510000);
-INSERT INTO public.transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
+INSERT INTO  transactions ("TransactionID","CustomerID","ProductID","TransactionDate","Quantity","TotalValue","Price") VALUES
 	 ('T00624','C0105','P077','2024-08-03 23:04:47',4,1062.040000,265.510000),
 	 ('T00778','C0175','P077','2024-07-18 11:21:41',4,1062.040000,265.510000),
 	 ('T00920','C0090','P077','2024-04-26 11:22:42',1,265.510000,265.510000),

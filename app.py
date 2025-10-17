@@ -62,7 +62,9 @@ def execute_user_query(query):
                     "success": True,
                     "columns": columns,
                     "data": [dict(row) for row in results],
-                    "row_count": len(results),
+                    "row_count": len(
+                        results
+                    ),  # Use len(results) instead of cursor.rowcount
                 }
             else:
                 conn.commit()
