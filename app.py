@@ -84,14 +84,16 @@ def get_expected_result(question_id):
     """Get expected results for specific questions"""
     expected_queries = {
         "1": """
-            WITH cte AS (
+            SELECT sub.*
+            FROM (
                 SELECT 
-                    *, 
-                    ROW_NUMBER() OVER (PARTITION BY ProductID ORDER BY TransactionDate) as rn
-                FROM transactions 
-            )
-            SELECT * FROM cte 
-            WHERE rn = 3
+                    t.*, 
+                    ROW_NUMBER() OVER (PARTITION BY t.ProductID ORDER BY t.TransactionDate) AS rn
+                FROM transactions t
+            ) AS sub
+            JOIN customers c ON sub.CustomerID = c.CustomerID
+            JOIN products p ON sub.ProductID = p.ProductID
+            WHERE rn = 3;
         """,
         "2": """
             SELECT 
@@ -286,5 +288,6 @@ import os
 
 if __name__ == "__main__":
     # Use Render's assigned port or fallback to 5000
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=True)
+    # port = int(os.environ.get("PORT", 5000))
+    # app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(debug=True, port=5003)
